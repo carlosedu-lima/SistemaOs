@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Criar OS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f6f8;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007BFF;
+      padding: 15px 0;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #0056b3;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .content {
+      margin-top: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+     <nav>
+    <a href="criar_os.html">Criar OS</a>
+    <a href="producao.php">Produção</a>
+    <a href="relatorios_atualizado.php">Relatórios</a>
+  </nav>
+
+  <main class="content">
+    <h2>Bem-vindo ao Sistema!</h2>
+    <p>Aqui você pode gerenciar ordens de serviço, acompanhar a produção e gerar relatórios.</p>
+  </main>
+
+    
+  <h1>Criar Ordem de Serviço</h1>
+
+  <form action="criar_os.php" method="post">
+    <input type="text" name="cliente" placeholder="Cliente" required>
+    <input type="text" name="servico" placeholder="Serviço" required>
+    <textarea name="descricao" placeholder="Descrição" required></textarea>
+
+    <input type="number" step="0.01" name="valor_total" placeholder="Valor Total (R$)" required>
+    <input type="number" step="0.01" name="valor_entrada" placeholder="Valor de Entrada (R$)" required>
+    <input type="number" step="0.01" name="valor_receber" placeholder="Valor a Receber (R$)" required>
+
+    <button type="submit">Criar OS</button>
+  </form>
+</body>
+</html>
